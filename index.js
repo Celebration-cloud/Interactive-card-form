@@ -43,15 +43,6 @@ const processing = async() =>{
             const error5 = `<p class="error">please input your cvc</p>`
             cvcVal.innerHTML += error5
         }else{
-            const response = await fetch('/api/cards', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(card)
-            })
-            const data = await response.json()
-            console.log(data)
             console.log(card)
             result()
         }
