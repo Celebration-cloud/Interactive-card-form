@@ -72,7 +72,6 @@ const validation = () =>{
         error4 = ``
         error5 = ``
         console.log(card)
-        result()
     }
 }
 const puttingInfo = () =>{
@@ -86,16 +85,16 @@ const puttingInfo = () =>{
 
 if(forms){
     forms.addEventListener('input', async (e)=>{
-        puttingInfo()
-        forms.addEventListener('submit', async () => {
-            e.preventDefault()
-            
-            try {
-                validation()
-            } catch (error) {
-                const sorry = document.getElementById("try-again")
-                sorry.textContent = 'Sorry, Something went wrong, please try again'
+        e.preventDefault()
+        try {
+            puttingInfo()
+            validation()
+            if(validation()){
+                result()
             }
-        })
+        } catch (error) {
+            const sorry = document.getElementById("try-again")
+            sorry.textContent = 'Sorry, Something went wrong, please try again'
+        }
     })
 }
