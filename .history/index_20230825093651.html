@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section id="section-a" class="section-a">
+      <div id="card">
+        <div class="port">
+          <div id="profile"></div>
+          <span class="detail"></span>
+        </div>
+        <div class="credentials">
+          <p id="card-number">0000 0000 0000 0000</p>
+          <div id="others">
+            <span id="card-name"></span>
+            <span id="exp-date">00/00</span>
+          </div>
+        </div>
+      </div>
+      <div id="card-back">
+        <p id="cvc-digit"></p>
+      </div>
+      
+    </section>
+    <!-- Add your site or application content here -->
+    <!-- Card Details Form Section-->
+    <section id="section-b" class="section-b">
+      <form id="formEl" action="">
+        <label for="nameEl" id="cardholder-number-label">CARDHOLDER NAME</label><br/>
+        <span id="chn"></span>
+        <input name="nameEl" id="cardholder-name-input" placeholder="eg. Jane Appleseed" required/><br/>
+        <label for="card-number" id="card-number-label">CARD NUMBER</label><br/>
+        <span id="cn"></span>
+        <input name="card-number" id="card-number-input" type="text" placeholder="e.g. 1234 5678 9123 0000" required maxlength="16"/><br/>
+        <div class="more">
+          <div class="date">
+            <label for="expire-date" id="expire-date-label">EXP. DATE (MM/YY)</label><br/>
+            <div class="year">
+              <span id="month-ree"></span>
+              <input name="expire-date" id="expire-date" type="tel" maxlength="2" placeholder="MM" required/><br/>
+              <input name="expire-date2" id="expire-date2" type="tel" maxlength="2"  placeholder="YY" required/><br/>
+            </div>
+          </div>
+          <div class="back-info">
+            <label for="cvc" id="cvc-label">CVC</label><br/>
+            <span id="cvcError"></span>
+            <input name="cvc" id="cvc" type="tel" placeholder="e.g. 123" required maxlength="3"/><br/>
+          </div><br>
+        </div>
+        <button type="submit">Confirm</button>
+        <script src="index.js"></script>
+      </form>
+    </section>
+  </div>
+  
+  <!-- 0000 0000 0000 0000
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm -->
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

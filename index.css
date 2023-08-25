@@ -74,7 +74,7 @@ body{
     color: rgba(255, 255, 255, 0.658);
 }
 #card-name{
-    font-size: 10px;
+    font-size: 15px;
     color: antiquewhite;
 }
 #card-back{
@@ -160,15 +160,40 @@ button{
     margin-bottom: 30px;
     margin-top: 5px;
 }
+.finish{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.checked{
+    align-self: center;
+    margin-bottom: 10px;
+}
 .thanks{
     text-align: center;
-    padding: 5px;
+    padding: 1px;
 }
 .complete{
     text-align: center;
+    color: hsl(278, 24%, 50%);
     padding-bottom: 30px;
 }
-.error{
+.success-button{
+    align-self: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 6px;
+    width: 50%;
+    margin-bottom: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.error2{
+    position: absolute;
+    margin-top: -10px;
     color: red;
 }
 @media (max-width: 1024px) {
@@ -177,7 +202,6 @@ button{
         background-repeat: no-repeat;
         background-size: 70%;
         height: 10vh;
-        
     }
     .container{
         display: flex;
@@ -233,6 +257,9 @@ button{
         color: white;
         border: none;
     }
+    .success-button{
+        width: 70%;
+    }
     .year{
         display: flex;
     }
@@ -285,6 +312,9 @@ button{
     }
 }
 @media (max-width: 762px) {
+    body{
+        right: 0;
+    }
     .container{
         height: 200px;
     }
@@ -297,7 +327,7 @@ button{
         width: 300px;
         height: 150px;
         align-self: flex-end;
-        margin-right: 20px;
+        margin-right: 10px;
     }
     #card{
         width: 250px;
@@ -327,5 +357,8 @@ button{
         margin-top: 64px;
         font-size: small;
         margin-right: 60px;
+    }
+    .success-button{
+        width: 100%;
     }
 }
